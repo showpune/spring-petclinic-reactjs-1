@@ -22,4 +22,4 @@ az configure --defaults \
 az spring-cloud app create --name ${APP_NAME} --instance-count 1 --is-public true 
 
 # ==== Deploy apps ====
-az spring-cloud app deploy --name ${APP_NAME} --source-path . --service ${SPRING_CLOUD_SERVICE} --resource-group ${RESOURCE_GROUP} --builder nodejs --verbose build_env '{"BP_NODE_RUN_SCRIPTS": "install-types,typings-install"}'
+az spring-cloud app deploy --name ${APP_NAME} --source-path . --service ${SPRING_CLOUD_SERVICE} --resource-group ${RESOURCE_GROUP} --builder nodejs --verbose --build-env '{"BP_NODE_RUN_SCRIPTS": "install-types,typings-install"}'
